@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.9.1" last-position="0,0" last-zoom="1"
+	 default-schema="public" default-owner="postgres">
+<database name="new_database" is-template="false" allow-conns="true">
+</database>
+
+<schema name="public" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<table name="temperatura">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="700" y="360"/>
+	<column name="fecha" not-null="true">
+		<type name="timestamp with time zone" length="0" with-timezone="true"/>
+	</column>
+	<column name="value" not-null="true">
+		<type name="smallint" length="0"/>
+	</column>
+</table>
+
+<table name="humedad">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="360" y="340"/>
+	<column name="fecha" not-null="true">
+		<type name="timestamp with time zone" length="0" with-timezone="true"/>
+	</column>
+	<column name="valor" not-null="true">
+		<type name="smallint" length="0"/>
+	</column>
+	<constraint name="humedad_pk" type="pk-constr" table="public.humedad">
+		<columns names="fecha" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="luz">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="589" y="469"/>
+	<column name="fecha" not-null="true">
+		<type name="timestamp with time zone" length="0" with-timezone="true"/>
+	</column>
+	<column name="value" not-null="true">
+		<type name="smallint" length="0"/>
+	</column>
+	<constraint name="luz_pk" type="pk-constr" table="public.luz">
+		<columns names="fecha" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="planta">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="480" y="240"/>
+	<column name="fecha" not-null="true">
+		<type name="timestamp with time zone" length="0" with-timezone="true"/>
+	</column>
+	<column name="value" not-null="true">
+		<type name="smallint" length="0"/>
+	</column>
+	<constraint name="planta_pk" type="pk-constr" table="public.planta">
+		<columns names="fecha" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="movimiento">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="240" y="460"/>
+	<column name="fecha" not-null="true">
+		<type name="timestamp with time zone" length="0" with-timezone="true"/>
+	</column>
+	<constraint name="movimiento_pk" type="pk-constr" table="public.movimiento">
+		<columns names="fecha" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+</dbmodel>
